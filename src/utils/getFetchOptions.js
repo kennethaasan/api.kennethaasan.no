@@ -7,7 +7,7 @@ const agent = new https.Agent({
 export default function getFetchOptions() {
   return {
     headers: {
-      'user-agent': 'byggreal',
+      'user-agent': 'api.kennethaasan.no',
     },
     agent,
     timeout: 6000,

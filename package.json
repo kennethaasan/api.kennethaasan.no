@@ -31,7 +31,7 @@
     "start": "NODE_ENV=development nodemon --watch src/server --watch src/config src/index.js",
     "prod": "NODE_ENV=production node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "rm -rf node_modules && yarn install --production && rsync -vzrS --exclude=\".*\" --exclude=\".log\" --include=\".babelrc\" ./ kenneth@kennethaasan.no:/var/www/byggreal-api && yarn",
+    "release": "rm -rf node_modules && yarn install --production && rsync -vzrS --exclude=\".*\" --exclude=\".log\" --include=\".babelrc\" ./ kenneth@kennethaasan.no:/var/www/api.kennethaasan.no && yarn",
     "eslint": "eslint src",
     "prettier": "prettier --single-quote --trailing-comma es5 --parser babylon --write \"src/**/*.js\""
   }
