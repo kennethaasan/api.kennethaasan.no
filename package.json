@@ -33,6 +33,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "rm -rf node_modules && yarn install --production && rsync -vzrS --exclude=\".*\" --exclude=\".log\" --include=\".babelrc\" ./ kenneth@kennethaasan.no:/var/www/api.kennethaasan.no && yarn",
     "eslint": "eslint src",
-    "prettier": "prettier --single-quote --trailing-comma es5 --parser babylon --write \"src/**/*.js\""
+    "prettier": "prettier --write \"src/**/*.js\""
   }
 }
