@@ -64,7 +64,9 @@ if (process.env.NODE_ENV === 'development') {
   });
 
   auth.get('/cleanup', (req, res, next) => {
-    User.remove({}).then(send200Success(res, 'Cleanup done')).catch(next);
+    User.remove({})
+      .then(send200Success(res, 'Cleanup done'))
+      .catch(next);
   });
 
   auth.get('/setup-homes', (req, res, next) => {

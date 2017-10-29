@@ -41,11 +41,13 @@ lettingsRouter
   .put(auth, (req, res, next) =>
     Letting.findById(req.params.lettingId)
       .then(letting =>
-        Object.assign(letting, req.body).save().then(lettingUpdated =>
-          send200Auth(res, {
-            letting: lettingUpdated,
-          })
-        )
+        Object.assign(letting, req.body)
+          .save()
+          .then(lettingUpdated =>
+            send200Auth(res, {
+              letting: lettingUpdated,
+            })
+          )
       )
       .catch(next)
   )

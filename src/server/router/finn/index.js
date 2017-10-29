@@ -16,7 +16,9 @@ finn.param(ID, (req, res, next, id) => {
 });
 
 finn.get(`/:${ID}`, (req, res, next) => {
-  getFinnAd(req.params.id).then(text => send200(res, text)).catch(next);
+  getFinnAd(req.params.id)
+    .then(text => send200(res, text))
+    .catch(next);
 });
 
 export default finn;

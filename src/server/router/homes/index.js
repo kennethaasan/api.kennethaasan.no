@@ -41,11 +41,13 @@ homesRouter
   .put(auth, (req, res, next) =>
     Home.findById(req.params.homeId)
       .then(home =>
-        Object.assign(home, req.body).save().then(homeUpdated =>
-          send200Auth(res, {
-            home: homeUpdated,
-          })
-        )
+        Object.assign(home, req.body)
+          .save()
+          .then(homeUpdated =>
+            send200Auth(res, {
+              home: homeUpdated,
+            })
+          )
       )
       .catch(next)
   )

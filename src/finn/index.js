@@ -82,9 +82,8 @@ export default function getFinnAd(id) {
 
                 const image = {
                   src: attributes.src || attributes['data-src'] || null,
-                  srcset: attributes.srcset ||
-                    attributes['data-srcset'] ||
-                    null,
+                  srcset:
+                    attributes.srcset || attributes['data-srcset'] || null,
                   sizes: attributes.sizes || null,
                   alt: attributes.alt || null,
                   index: attributes['data-index'] || null,
